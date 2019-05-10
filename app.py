@@ -14,7 +14,7 @@ from flask import Flask, jsonify, render_template
 from keras.models import load_model
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from joblib import load
-preprocess_pipeline = load('../Model_Info/pipeline.joblib')
+preprocess_pipeline = load('Model_Info/pipeline.joblib')
 import pandas as pd
 import numpy as np
 
