@@ -1,1 +1,1 @@
-web: gunicorn mlcancer.app:app
+web: gunicorn ML-Cancer-Final-Project.app:app
