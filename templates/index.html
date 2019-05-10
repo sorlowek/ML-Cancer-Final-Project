@@ -126,7 +126,11 @@
                         <div class="box wow fadeInLeft">
                           <div class="icon"><i class="fa fa-bar-chart"></i></div>
                           <h4 class="title"><a >3. Neural Network </a></h4>
-                          <p class="description">We developed the a neural network using a combined set of cancer and pollution data.</p>
+                          <p class="description">We chose to use a neural network as our major machine learning algorithm. This allowed for unbiased combination of the pollution data with our cancer incidence data, 
+                            where the model would calculate determinative and predictive weights. Our model consists of three layers. The input for the training and test data was an array with 65 variables, 
+                            derived from the 7 pollutants and the dummy values for Race, Gender and State. Our model works most accurately with an Adam optimizer and 20 epochs. Once generated we save our model for live reloading.</p>
+                            <p>The user defines predictive inputs into the neural network by selecting race, gender, state and year. The selections and pollution data based on year are then added to the array and put 
+                            through the network, returning percentage probabilities of respiratory cancer type as a short data table.</p>
                         </div>
                       </div>
 
