@@ -1,1 +1,1 @@
-web: gunicorn MLCancer.app:app
+web: gunicorn mlcancer.app:app
