@@ -1,7 +1,7 @@
 from keras.models import load_model
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from joblib import load
-preprocess_pipeline = load('../Model_Info/pipeline.joblib')
+preprocess_pipeline = load('Model_Info/pipeline.joblib')
 import pandas as pd
 import numpy as np
 from keras import backend as K
@@ -11,7 +11,7 @@ def NNpredict(values):
     values = values.reshape(1,-1)
     print(values.shape)
     
-    cancer_pollution_model = load_model("../Model_Info/neuralnetwork.h5")
+    cancer_pollution_model = load_model("Model_Info/neuralnetwork.h5")
     model = cancer_pollution_model
    
     values_scaled = preprocess_pipeline.transform(values)
@@ -45,7 +45,7 @@ def getNNvalues (state, race, year, gender):
     
     data_cancer = race_dummy + gender_dummy + state_dummy
 
-    pollution_data = pd.read_csv("../Data/Data_for_Graphing/ARpollution.csv")
+    pollution_data = pd.read_csv("Data/Data_for_Graphing/ARpollution.csv")
     pollution_data_clean= pollution_data[["State", "Year", "CO", "Lead", "NO2", "Ozone", "PM10", "PM2_5", "SO2"]]
 
     data_poll = pollution_data_clean.loc[(pollution_data_clean['Year']==year) & (pollution_data_clean["State"]==state)]
